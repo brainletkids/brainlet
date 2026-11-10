@@ -1,0 +1,24 @@
+[build]
+  publish = "public"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/otp/send"
+  to = "/.netlify/functions/otp-send"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/otp/verify"
+  to = "/.netlify/functions/otp-verify"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/session"
+  to = "/.netlify/functions/session"
+  status = 200
+  force = true
